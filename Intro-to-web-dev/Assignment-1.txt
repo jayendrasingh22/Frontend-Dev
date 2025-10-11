@@ -1,0 +1,161 @@
+Assignment - 1
+=================
+
+1. Explain the difference between frontend, backend, and full-stack development with suitable real-world examples.
+
+
+
+Frontend development:
+Frontend is what users actually see and interact with on a website. It includes layout, colors, buttons, menus, etc. Technologies used are HTML, CSS, and JavaScript.
+Example: When you visit Amazon, the product page, “Add to Cart” button, and layout design you see — that’s frontend.
+
+Backend development:
+Backend runs behind the scenes. It handles the logic, database, authentication, and data processing. Technologies used are Node.js, Python (Django), Java (Spring Boot), etc.
+Example: When you log in to your account or check order details, the backend verifies your data and fetches information from the database.
+
+Full-stack development:
+A full-stack developer handles both frontend and backend.
+Example: A full-stack developer can design the webpage (frontend) and also manage data storage and server logic (backend) for the same project.
+
+
+2. Create a simple diagram showing how the client-server model works in web architecture.
+
+
+
+   +------------------+
+   |   Web Browser    |   <-- Client (User)
+   +--------+---------+
+            |
+            | 1. Sends request (HTTP)
+            v
+   +--------+---------+
+   |   Web Server     |   <-- Handles requests
+   +--------+---------+
+            |
+            | 2. Interacts with database
+            v
+   +--------+---------+
+   |   Database        |
+   +------------------+
+            |
+            | 3. Sends data back
+            v
+   +------------------+
+   |   Web Browser    |   <-- Displays webpage
+   +------------------+
+
+
+3. Describe how a browser requests and displays a web page from a web server.
+
+
+
+1. The user types a website URL (like www.google.com) into the browser.
+2. The browser converts the domain name into an IP address using DNS.
+3. A HTTP/HTTPS request is sent to the web server.
+
+4. The web server processes the request and sends back HTML, CSS, and JS files.
+5. The browser receives these files, renders them, and displays the final webpage to the user.
+
+
+4. Identify and list the tools required to set up a web development environment. Explain the purpose of each.
+
+
+------------------------------------------------------------------------------------------------------------
+Tool                | Purpose
+--------------------|---------------------------------------------------
+VS Code             | Code editor for writing HTML, CSS, JS, and more.
+Web Browser         | To test and preview websites.
+Node.js & npm       | For running JavaScript outside the browser and managing packages.
+Git & GitHub        | Version control and storing code online.
+Live Server          | Auto-refreshes the browser when you save code.
+
+
+5. Explain what a web server is and give examples of commonly used servers.
+
+
+
+A web server is software that delivers web pages to users upon request. It listens for HTTP requests from clients (browsers) and sends responses back.
+Common examples:
+- Apache HTTP Server
+- Microsoft IIS
+- Node.js (Express server)
+
+
+6. Define the roles of a frontend developer, backend developer, and database administrator in a project.
+
+
+--------------------------------------------------------------------------------------------------------
+Role                    | Main Work
+-------------------------|----------------------------------------------
+Frontend Developer       | Designs the user interface, builds responsive layouts using HTML, CSS, JS.
+Backend Developer        | Handles logic, authentication, APIs, and server-side operations.
+Database Administrator   | Manages databases, ensures data security, performance, and backups.
+
+
+7. Install VS Code and configure it for HTML, CSS, and JavaScript development.
+
+
+Steps to install & set up VS Code:
+1. Go to https://code.visualstudio.com/
+2. Download and install VS Code.
+3. Install the following extensions:
+   - Live Server
+4. Create a new folder → open it in VS Code.
+5. Add files: index.html, style.css, script.js.
+
+
+
+8. Explain the difference between static and dynamic websites. Provide an example of each.
+
+
+
+------------------------------------------------------------------------------------------
+Type               | Description                                      | Example
+-------------------|--------------------------------------------------|-------------------------
+Static Website     | Pages are fixed, content doesn’t change unless manually updated. | A personal portfolio website.
+Dynamic Website    | Pages change based on user input or data from database. | Facebook, YouTube, or Gmail.
+
+
+9. Research and list five web browsers. Explain how rendering engines differ between them.
+
+
+
+------------------------------------------------------------------------------------------
+Browser          | Rendering Engine | Notes
+-----------------|------------------|----------------------------------
+Google Chrome    | Blink            | Fast and modern; used by many browsers.
+Mozilla Firefox  | Gecko            | Open-source, supports advanced web standards.
+Safari           | WebKit           | Optimized for Apple devices.
+Microsoft Edge   | Blink            | Based on Chromium for better compatibility.
+Opera            | Blink            | Uses Chromium base, supports VPN and extras.
+
+
+10. Draw a labeled diagram showing the basic web architecture flow — client, server, database, and APIs.
+
+
+
+      +--------------------+
+      |     CLIENT         |
+      | (Web Browser/App)  |
+      +---------+----------+
+                |
+                | HTTP Request
+                v
+      +---------+----------+
+      |      SERVER        |
+      | (Backend Logic)    |
+      +---------+----------+
+                |
+                | Queries / API Calls
+                v
+      +---------+----------+
+      |     DATABASE        |
+      | (Data Storage)      |
+      +---------+----------+
+                |
+                | Response (Data)
+                v
+      +--------------------+
+      |     CLIENT         |
+      |  (Rendered Page)   |
+      +--------------------+
