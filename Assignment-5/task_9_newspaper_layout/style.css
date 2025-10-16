@@ -1,0 +1,59 @@
+body {
+    background-color: #e8e4d8; /* Page background color */
+    font-family: "Times New Roman", Times, serif;
+    color: #333;
+}
+
+.page-container {
+    padding: 40px; /* Padding around the main content area */
+}
+
+.newspaper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* Create three vertical text columns */
+    column-count: 3;
+    column-gap: 40px; /* Space between columns */
+    text-align: justify; /* Justify text */
+}
+
+header h1 {
+    /* Span heading across all columns */
+    column-span: all;
+    text-align: center;
+    font-size: 3rem;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* Image floated to the left */
+img {
+    float: left;
+    width: 250px;
+    margin: 0 20px 10px 0;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .newspaper {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .newspaper {
+        column-count: 1;
+    }
+    img {
+        float: none;
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

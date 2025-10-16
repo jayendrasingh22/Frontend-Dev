@@ -1,0 +1,95 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #eef1f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.pricing-container {
+    display: flex; /* Using flexbox for columns */
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+}
+
+.plan {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 30px;
+    flex: 1; /* Each plan takes equal space */
+    display: flex;
+    flex-direction: column;
+    border: 3px solid transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect on each plan */
+.plan:hover {
+    transform: scale(1.05); /* Slightly enlarges the box */
+    background-color: #f9f9f9;
+}
+
+.plan h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3498db;
+    margin: 20px 0;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-grow: 1; /* Ensures list grows to push button down, maintaining equal height */
+}
+
+.plan li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.plan li:last-child {
+    border-bottom: none;
+}
+
+.button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+/* Highlighting the most popular plan */
+.plan.popular {
+    border-color: #3498db; /* Different border color */
+    position: relative;
+}
+
+.plan.popular::before {
+    content: "Most Popular";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}

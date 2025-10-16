@@ -1,0 +1,100 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header, Nav, and Footer */
+header {
+    background-color: #d9534f;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Main Content Sections */
+main section {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px; /* Padding for spacing */
+    border-bottom: 5px solid #fff; /* Border to define sections */
+    text-align: center;
+}
+
+main section h2 {
+    font-size: 2.5rem; /* Different heading font size */
+    font-weight: 700; /* Bolder heading */
+    margin-bottom: 20px; /* Margin for spacing */
+}
+
+main section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+}
+
+/* Section 1: Linear Gradient Background */
+#intro {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    color: white;
+}
+
+/* Section 2: Parallax Background Image */
+#culture {
+    background-image: url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Section 3: Radial Gradient Background */
+#food {
+    background: radial-gradient(circle, #ffecd2 0%, #fcb69f 100%);
+    color: #5c3a3a;
+}
+
+/* Section 4: Parallax Background Image */
+#sights {
+    background-image: url('https://images.unsplash.com/photo-1513407030348-c983a97b98d8?q=80&w=2072');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}

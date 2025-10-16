@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Grid layout for the gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative; /* Needed for absolute positioning of the caption */
+    overflow: hidden; /* Hides parts of the image that scale outside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Clean shadow effect */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease; /* Smooth transition for scaling */
+}
+
+.caption {
+    position: absolute; /* Position overlay relative to the gallery item */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease; /* Smooth transition for fading in */
+    font-size: 1.1rem;
+}
+
+/* Hover effects */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slightly scales up the image */
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* Shows the caption on hover */
+}

@@ -1,0 +1,113 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Fixed Header */
+.dashboard-header {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #dee2e6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+/* Flexbox for main layout */
+.dashboard-container {
+    display: flex;
+    padding-top: 65px; /* Height of the header */
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 240px;
+    background-color: #343a40;
+    color: #fff;
+    min-height: calc(100vh - 65px); /* Full screen height minus header */
+    position: fixed;
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li a {
+    display: block;
+    padding: 15px 20px;
+    color: #c2c7d0;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.sidebar nav li a:hover {
+    background-color: #495057;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 240px; /* Space for the sidebar */
+    padding: 30px;
+    width: 100%;
+}
+
+.content-boxes {
+    display: flex;
+    gap: 20px; /* Even spacing between boxes */
+}
+
+.box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1;
+}
+
+.box h3 {
+    margin-top: 0;
+    color: #6c757d;
+}
+
+.box p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #343a40;
+}
+
+/* Responsive: Sidebar stacks above content on small screens */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        position: static; /* Remove fixed positioning */
+    }
+    
+    .main-content {
+        margin-left: 0; /* Remove margin */
+    }
+    
+    .content-boxes {
+        flex-direction: column;
+    }
+}
