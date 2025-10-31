@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+        "hd hd"
+        "sidebar content";
+    gap: 1rem;
+    min-height: 100vh;
+}
+
+.hd {
+    grid-area: hd;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+    display: flex;
+    align-items: center
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #fff;
+    padding: 1rem
+}
+
+.content {
+    grid-area: content;
+    padding: 1rem;
+    background: transparent
+}
+
+.content .box {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 24px rgba(2, 6, 23, .04);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.content .box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 44px rgba(2, 6, 23, .08)
+}
+
+.span-two {
+    grid-column: 1 / -1
+}
+
+/* will affect when inside a grid; controlled below */
+
+/* create a 2x2 grid inside content */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(120px, auto);
+    gap: 1rem
+}
+
+.content .span-two {
+    grid-column: 1 / span 2
+}
+
+/* Responsive */
+@media (max-width:900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "hd" "sidebar" "content"
+    }
+
+    .sidebar {
+        order: 2
+    }
+
+    .content .span-two {
+        grid-column: auto
+    }
+}

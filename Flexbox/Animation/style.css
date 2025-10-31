@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f9fc
+}
+
+.loader-wrap {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #0b6efd;
+    animation: jump .8s infinite ease-in-out
+}
+
+.d1 {
+    animation-delay: 0s
+}
+
+.d2 {
+    animation-delay: .12s
+}
+
+.d3 {
+    animation-delay: .24s
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-18px)
+    }
+}

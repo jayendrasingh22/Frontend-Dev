@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f3f6fb
+}
+
+.pricing {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    animation: fadeIn .6s ease both
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, .04);
+    width: 230px;
+    text-align: center;
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px)
+}
+
+.featured {
+    transform: scale(1.05);
+    background: linear-gradient(180deg, #fff, #f9fbff);
+    border: 2px solid #e6f0ff
+}
+
+.price {
+    font-size: 1.6rem;
+    margin-top: .5rem;
+    font-weight: 700;
+    color: #0b6efd
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+/* Responsive: stack below 750px */
+@media (max-width:750px) {
+    .pricing {
+        flex-direction: column;
+        padding: 1rem
+    }
+
+    .card {
+        width: 100%
+    }
+}
