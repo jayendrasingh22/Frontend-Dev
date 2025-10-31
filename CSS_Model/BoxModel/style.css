@@ -1,0 +1,30 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f7fa;
+    font-family: sans-serif
+}
+
+.margin {
+    background: #e0f7fa;
+    padding: 20px
+}
+
+.border {
+    background: #b2ebf2;
+    padding: 20px;
+    border: 4px solid #00796b
+}
+
+.padding {
+    background: #80deea;
+    padding: 20px
+}
+
+.content {
+    background: #4dd0e1;
+    padding: 10px;
+    color: #fff
+}

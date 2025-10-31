@@ -1,0 +1,25 @@
+/* attribute selector */
+a[href^="https"] {
+    color: green
+}
+
+/* type selector */
+input[type="text"]:focus {
+    border: 2px solid blue
+}
+
+/* pseudo-classes */
+li:nth-child(odd) {
+    background: #f0f0f0
+}
+
+/* pseudo-elements */
+li::before {
+    content: "• ";
+    color: #999
+}
+
+/* combinators */
+ul>li+.note {
+    color: red
+}

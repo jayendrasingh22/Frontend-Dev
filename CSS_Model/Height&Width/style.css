@@ -1,0 +1,35 @@
+body,
+html {
+    margin: 0;
+    height: 100%
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100vh;
+    background: #f6f8fb
+}
+
+.b1 {
+    width: 150px;
+    height: 150px;
+    background: #ffb6b6
+}
+
+.b2 {
+    width: 20%;
+    height: 30vh;
+    background: #a3d8ff;
+    min-height: 100px
+}
+
+.b3 {
+    width: 10em;
+    height: 200px;
+    max-width: 200px;
+    background: #c1fba4;
+    overflow: auto
+}
