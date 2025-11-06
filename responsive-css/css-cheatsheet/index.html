@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive CSS Cheat Sheet</h1>
+        <p class="subtitle">Essential concepts for modern web design</p>
+    </header>
+
+    <main class="cheatsheet-grid">
+        <div class="topic-card">
+            <h2>Media Queries</h2>
+            <div class="content">
+                <pre><code>@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+                <p>Break points for common devices:</p>
+                <ul>
+                    <li>Mobile: 320px - 480px</li>
+                    <li>Tablet: 481px - 768px</li>
+                    <li>Desktop: 769px and above</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-card">
+            <h2>CSS Filters</h2>
+            <div class="content">
+                <p>Common filter properties:</p>
+                <ul>
+                    <li>blur(5px)</li>
+                    <li>brightness(150%)</li>
+                    <li>contrast(200%)</li>
+                    <li>grayscale(100%)</li>
+                    <li>sepia(100%)</li>
+                    <li>hue-rotate(90deg)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-card">
+            <h2>Responsive Units</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>rem:</strong> Relative to root font size</li>
+                    <li><strong>em:</strong> Relative to parent font size</li>
+                    <li><strong>vw:</strong> Viewport width percentage</li>
+                    <li><strong>vh:</strong> Viewport height percentage</li>
+                    <li><strong>%:</strong> Relative to parent element</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="topic-card">
+            <h2>Flexbox</h2>
+            <div class="content">
+                <pre><code>.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="topic-card">
+            <h2>CSS Grid</h2>
+            <div class="content">
+                <pre><code>.grid {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="topic-card">
+            <h2>Modern Typography</h2>
+            <div class="content">
+                <pre><code>h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+}</code></pre>
+                <p>Use relative units for better scaling</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

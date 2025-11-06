@@ -1,0 +1,127 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c3e50;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 3rem 5%;
+    background-color: #f5f5f5;
+}
+
+.features {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-box {
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box img {
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.feature-box h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.feature-box p {
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+/* Media Query for screens below 750px */
+@media screen and (max-width: 750px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        max-width: 100%;
+    }
+
+    .feature-box:hover {
+        transform: scale(1.02); /* Smaller scale on mobile for better UX */
+    }
+}

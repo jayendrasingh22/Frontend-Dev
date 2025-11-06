@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>ResponsiveCSS</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Documentation</a>
+                <a href="#">Settings</a>
+            </nav>
+            <div class="user-profile">
+                <img src="Image.jpg" alt="User profile">
+                <span>Yashraj Mishra</span>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <h3>Quick Links</h3>
+                    <a href="#" class="nav-item active">
+                        <span class="icon">📊</span>
+                        Overview
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="icon">🎨</span>
+                        Design Tools
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="icon">📱</span>
+                        Responsive
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="icon">📚</span>
+                        Resources
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <h3>Tools</h3>
+                    <a href="#" class="nav-item">
+                        <span class="icon">🔍</span>
+                        Inspector
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="icon">📏</span>
+                        Grid Guide
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Responsive Design Overview</h2>
+            
+            <div class="cards-grid">
+                <!-- Filters Card -->
+                <div class="card">
+                    <h3>CSS Filters</h3>
+                    <div class="card-content">
+                        <p>Common filter properties for image effects:</p>
+                        <ul>
+                            <li>blur()</li>
+                            <li>brightness()</li>
+                            <li>contrast()</li>
+                            <li>grayscale()</li>
+                        </ul>
+                        <a href="#" class="card-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Typography Card -->
+                <div class="card">
+                    <h3>Typography</h3>
+                    <div class="card-content">
+                        <p>Responsive text sizing:</p>
+                        <code>font-size: clamp(1rem, 2vw, 2rem);</code>
+                        <ul>
+                            <li>Fluid Typography</li>
+                            <li>Relative Units</li>
+                            <li>Scale Functions</li>
+                        </ul>
+                        <a href="#" class="card-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Media Queries Card -->
+                <div class="card">
+                    <h3>Media Queries</h3>
+                    <div class="card-content">
+                        <p>Common breakpoints:</p>
+                        <ul>
+                            <li>Mobile: 320px - 480px</li>
+                            <li>Tablet: 481px - 768px</li>
+                            <li>Desktop: 769px+</li>
+                        </ul>
+                        <a href="#" class="card-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Cheat Sheet Card -->
+                <div class="card">
+                    <h3>Quick References</h3>
+                    <div class="card-content">
+                        <ul>
+                            <li><a href="#">Flexbox Guide</a></li>
+                            <li><a href="#">Grid Layout</a></li>
+                            <li><a href="#">Units Converter</a></li>
+                            <li><a href="#">Best Practices</a></li>
+                        </ul>
+                        <a href="#" class="card-link">View All →</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

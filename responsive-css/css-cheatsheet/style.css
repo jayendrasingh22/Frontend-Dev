@@ -1,0 +1,170 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5;
+    padding: 2rem 1rem;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #666;
+}
+
+/* Grid Layout */
+.cheatsheet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Topic Card Styles */
+.topic-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.topic-card h2 {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+/* Code Block Styles */
+pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+    color: #e74c3c;
+}
+
+/* List Styles */
+ul {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Strong Tag Styles */
+strong {
+    color: #2c3e50;
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 700px) {
+    body {
+        padding: 1rem;
+    }
+
+    .cheatsheet-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .topic-card {
+        border-radius: 8px;
+    }
+
+    .topic-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    pre {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* Enhanced readability for mobile */
+    h2 {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    ul {
+        margin-left: 0;
+    }
+
+    li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Interactive Hover Effects */
+.topic-card h2 {
+    transition: background-color 0.3s ease;
+}
+
+.topic-card:hover h2 {
+    background-color: #3498db;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .topic-card h2 {
+        background: #000;
+    }
+    
+    .topic-card {
+        border: 2px solid #000;
+    }
+}

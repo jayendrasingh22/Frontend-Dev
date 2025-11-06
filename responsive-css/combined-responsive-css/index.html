@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>ResponsiveCSS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cheatsheet">Cheatsheet</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <h2>Image Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=500&h=300&fit=crop" alt="Nature">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=500&h=300&fit=crop" alt="City">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=500&h=300&fit=crop" alt="Travel">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>Understanding Responsive Design</h2>
+            <div class="content-box">
+                <p>Responsive web design is an approach that makes web pages render well on a variety of devices and window or screen sizes. Recent work also considers the viewer proximity as part of the viewing context as an extension for RWD.</p>
+                <h3>Key Principles:</h3>
+                <ul>
+                    <li>Fluid Grids</li>
+                    <li>Flexible Images</li>
+                    <li>Media Queries</li>
+                    <li>Typography Scaling</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Cheatsheet Section -->
+        <section id="cheatsheet" class="cheatsheet-section">
+            <h2>CSS Cheatsheet</h2>
+            <div class="cheatsheet-grid">
+                <div class="cheat-item">
+                    <h3>Media Queries</h3>
+                    <pre><code>@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+}</code></pre>
+                </div>
+                <div class="cheat-item">
+                    <h3>Flexbox</h3>
+                    <pre><code>.flex-container {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+                </div>
+                <div class="cheat-item">
+                    <h3>Grid Layout</h3>
+                    <pre><code>.grid {
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fit, 
+        minmax(250px, 1fr));
+}</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@responsivecss.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-btn">Twitter</a>
+                <a href="#" class="social-btn">GitHub</a>
+                <a href="#" class="social-btn">LinkedIn</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ResponsiveCSS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

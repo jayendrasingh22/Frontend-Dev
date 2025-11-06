@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Filter Comparison</h1>
+        <p class="subtitle">Hover over the filtered image to see the original</p>
+
+        <div class="comparison-container">
+            <!-- Original Image Section -->
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop" 
+                     alt="Original landscape image"
+                     class="comparison-image">
+                <p class="caption">Original Image</p>
+            </div>
+
+            <!-- Filtered Image Section -->
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop" 
+                     alt="Filtered landscape image"
+                     class="comparison-image filtered">
+                <p class="caption">With Filter Applied</p>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+            <h2>Filter Details</h2>
+            <ul class="filter-info">
+                <li><strong>Brightness:</strong> 150%</li>
+                <li><strong>Contrast:</strong> 120%</li>
+                <li><strong>Saturation:</strong> 130%</li>
+                <li><strong>Warmth:</strong> Added using hue-rotate</li>
+            </ul>
+            <p class="tip">Hover over the right image to see the transition effect</p>
+        </div>
+    </div>
+</body>
+</html>

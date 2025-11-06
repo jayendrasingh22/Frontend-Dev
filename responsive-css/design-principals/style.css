@@ -1,0 +1,200 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* Grid Layout */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Principle Box Styles */
+.principle-box {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.principle-box:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+}
+
+/* Header Styles for Each Box */
+.principle-box h2 {
+    padding: 1.5rem;
+    background: #2c3e50;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.principle-box:hover h2 {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+/* Content Styles */
+.content {
+    padding: 1.5rem;
+}
+
+.description {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Code Example Styles */
+.code-example {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Key Points Styles */
+.key-points ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.key-points li {
+    color: #555;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.key-points li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: -1rem;
+}
+
+/* Hover Effects */
+.principle-box:hover .description {
+    color: #2c3e50;
+}
+
+.principle-box:hover .key-points li {
+    color: #2c3e50;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.principle-box {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.principle-box:nth-child(1) { animation-delay: 0.2s; }
+.principle-box:nth-child(2) { animation-delay: 0.4s; }
+.principle-box:nth-child(3) { animation-delay: 0.6s; }
+
+/* Media Query for Mobile */
+@media screen and (max-width: 600px) {
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .principle-box {
+        margin-bottom: 1rem;
+    }
+
+    .principle-box:hover {
+        transform: translateY(-3px);
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .code-example {
+        padding: 1rem;
+    }
+
+    code {
+        font-size: 0.85rem;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .principle-box {
+        border: 2px solid #000;
+    }
+
+    .principle-box h2 {
+        background: #000;
+    }
+
+    .code-example {
+        border: 2px solid #000;
+    }
+
+    .key-points li::before {
+        color: #000;
+    }
+}
