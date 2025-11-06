@@ -1,0 +1,168 @@
+/* Basic page styling */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+/* Element Selector
+   Targets all elements of the specified type */
+p {
+    margin-bottom: 1em;
+}
+
+/* Class Selector
+   Targets elements with the specified class attribute */
+.highlight {
+    background-color: #fff3b0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* ID Selector
+   Targets the element with the specified ID (should be unique) */
+#unique {
+    border: 2px solid #2b9348;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+/* Descendant Selector
+   Targets elements that are descendants of another element */
+.container p {
+    color: #1a759f;
+    padding-left: 20px;
+}
+
+/* Child Selector (>)
+   Targets direct children only */
+.parent > p {
+    border-left: 3px solid #184e77;
+    padding-left: 10px;
+}
+
+/* Adjacent Sibling Selector (+)
+   Targets the element that directly follows another */
+h3 + p {
+    font-weight: bold;
+    color: #6c757d;
+}
+
+/* General Sibling Selector (~)
+   Targets all matching siblings that follow */
+h4 ~ p {
+    font-style: italic;
+    color: #5f0f40;
+}
+
+/* Attribute Selector - Exact match
+   Targets elements with the exact attribute value */
+a[target="_blank"] {
+    color: #d00000;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+/* Attribute Selector - Contains
+   Targets elements whose attribute contains the value */
+a[href*="pdf"] {
+    color: #38b000;
+    font-weight: bold;
+}
+
+/* Attribute Selector - Starts with
+   Targets elements whose attribute starts with the value */
+input[type^="text"] {
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Header Styling */
+header {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    color: #1d3557;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #457b9d;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #1d3557;
+    margin-top: 0;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+    color: #6c757d;
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #adb5bd;
+}
+
+/* Interactive Elements */
+a:hover {
+    opacity: 0.8;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+}

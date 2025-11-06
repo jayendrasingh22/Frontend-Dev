@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors Practice</h1>
+        <nav>
+            <ul>
+                <li><a href="#basic">Basic Selectors</a></li>
+                <li><a href="#combinators">Combinators</a></li>
+                <li><a href="#attribute">Attribute Selectors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="basic">
+            <h2>Basic Selectors</h2>
+            
+            <!-- Element selector example -->
+            <p>This paragraph uses the element selector.</p>
+            
+            <!-- Class selector example -->
+            <p class="highlight">This paragraph uses the class selector.</p>
+            <p class="highlight">Another paragraph with the same class.</p>
+            
+            <!-- ID selector example -->
+            <div id="unique">This div uses the ID selector.</div>
+        </section>
+
+        <section id="combinators">
+            <h2>Combinator Selectors</h2>
+            
+            <!-- Descendant selector example -->
+            <div class="container">
+                <p>This paragraph is a descendant of the container.</p>
+                <span>
+                    <p>This paragraph is a deeper descendant.</p>
+                </span>
+            </div>
+            
+            <!-- Child selector example -->
+            <div class="parent">
+                <p>This is a direct child paragraph.</p>
+                <span>
+                    <p>This paragraph is not a direct child.</p>
+                </span>
+            </div>
+            
+            <!-- Adjacent sibling selector example -->
+            <h3>Title</h3>
+            <p>This paragraph is adjacent to the h3.</p>
+            <p>This paragraph is not adjacent to the h3.</p>
+            
+            <!-- General sibling selector example -->
+            <h4>Another Title</h4>
+            <p>This is a sibling paragraph.</p>
+            <div>A div in between</div>
+            <p>This is also a sibling paragraph.</p>
+        </section>
+
+        <section id="attribute">
+            <h2>Attribute Selectors</h2>
+            
+            <!-- Attribute presence and value selectors -->
+            <a href="https://example.com" target="_blank">External link</a>
+            <a href="local.html">Internal link</a>
+            <a href="file.pdf" download>Download link</a>
+            <input type="text" placeholder="Text input">
+            <input type="email" placeholder="Email input">
+        </section>
+    </main>
+
+    <footer>
+        <p>Practice page for learning CSS selectors</p>
+        <p class="copyright">Created for learning purposes</p>
+    </footer>
+</body>
+</html>

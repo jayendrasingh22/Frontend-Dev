@@ -1,0 +1,159 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* Grid layout for effects */
+.effects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Base card style */
+.effect-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Transform & Shadow Card */
+.transform-card {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transform-card:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+}
+
+/* Gradient Button */
+.gradient-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #2980b9, #3498db);
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #3498db, #2980b9);
+}
+
+/* Image Card with Zoom & Overlay */
+.image-card {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 128, 185, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay p {
+    color: white;
+    font-size: 1.2em;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+}
+
+.image-card:hover .overlay {
+    opacity: 1;
+}
+
+.image-card:hover .overlay p {
+    transform: translateY(0);
+}
+
+/* Slide Text Effect */
+.slide-text {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0e0e0 0%, #ffffff 100%);
+}
+
+.slide-content {
+    position: relative;
+    font-size: 1.5em;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.slide-content::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.slide-text:hover .slide-content {
+    transform: translateX(10px);
+    color: #3498db;
+}
+
+.slide-text:hover .slide-content::after {
+    width: 100%;
+}

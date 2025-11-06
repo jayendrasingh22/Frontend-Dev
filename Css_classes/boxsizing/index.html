@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Box-Sizing Comparison</h1>
+        <p class="intro">Compare how <code>box-sizing: content-box</code> (default) and <code>box-sizing: border-box</code> affect the total width of elements.</p>
+
+        <div class="comparison">
+            <!-- Content-box (default) example -->
+            <div class="box-wrapper">
+                <div class="box content-box">
+                    <h2>content-box</h2>
+                    <div class="dimensions">
+                        <p>Width: 300px</p>
+                        <p>Padding: 20px</p>
+                        <p>Border: 2px</p>
+                        <p class="total">Total: 344px</p>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <p>Default <code>box-sizing: content-box</code></p>
+                    <p>Total width = width + (padding × 2) + (border × 2)</p>
+                    <p>300 + (20 × 2) + (2 × 2) = 344px</p>
+                </div>
+            </div>
+
+            <!-- Border-box example -->
+            <div class="box-wrapper">
+                <div class="box border-box">
+                    <h2>border-box</h2>
+                    <div class="dimensions">
+                        <p>Width: 300px</p>
+                        <p>Padding: 20px</p>
+                        <p>Border: 2px</p>
+                        <p class="total">Total: 300px</p>
+                    </div>
+                </div>
+                <div class="explanation">
+                    <p><code>box-sizing: border-box</code></p>
+                    <p>Total width = width (includes padding and border)</p>
+                    <p>Width stays 300px regardless of padding/border</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Both boxes are set to width: 300px, but the total width differs based on box-sizing.</p>
+            <p>Border-box is often preferred as it makes sizing more intuitive.</p>
+        </footer>
+    </div>
+</body>
+</html>

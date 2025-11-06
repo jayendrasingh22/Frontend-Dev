@@ -1,0 +1,167 @@
+/* Base styles */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #334155;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #1e293b;
+    margin: 0 0 16px;
+}
+
+.intro {
+    text-align: center;
+    color: #64748b;
+    margin: 0 0 40px;
+    font-size: 1.1rem;
+}
+
+code {
+    background: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    color: #0f172a;
+}
+
+/* Comparison layout */
+.comparison {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.box-wrapper {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+/* Box styles */
+.box {
+    width: 300px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    border: 2px solid;
+}
+
+/* Content-box (default) */
+.content-box {
+    box-sizing: content-box;
+    background: #ede9fe;
+    border-color: #7c3aed;
+}
+
+/* Border-box */
+.border-box {
+    box-sizing: border-box;
+    background: #dbeafe;
+    border-color: #2563eb;
+}
+
+/* Box headers */
+.box h2 {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.content-box h2 {
+    color: #6d28d9;
+}
+
+.border-box h2 {
+    color: #1d4ed8;
+}
+
+/* Dimensions display */
+.dimensions {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.dimensions p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.total {
+    margin-top: 16px !important;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Explanations */
+.explanation {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.explanation p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.explanation p:first-child {
+    font-weight: 500;
+    color: #334155;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .comparison {
+        gap: 30px;
+    }
+    
+    .box-wrapper {
+        flex: none;
+        width: 100%;
+    }
+    
+    .box {
+        width: calc(100% - 44px); /* Accounting for border */
+        max-width: 300px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .intro {
+        font-size: 1rem;
+    }
+}
