@@ -1,0 +1,3 @@
+"use strict";
+const operations=["add","divide","power","root","subtract"];const num1=25,num2=0;
+operations.forEach(op=>{try{let res;switch(op){case"add":res=num1+num2;break;case"divide":if(num2===0) throw"Divide by zero";res=num1/num2;break;case"power":res=Math.pow(num1,2);break;case"root":if(num1<0) throw"Negative root";res=Math.sqrt(num1);break;case"subtract":res=num1-num2;break;default:throw"InvalidOperationError";}console.log(`${op}: ${res}`);}catch(e){console.log(`${op}: Error - ${e}`);}});
