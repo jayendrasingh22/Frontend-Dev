@@ -1,0 +1,5 @@
+body{font-family:Arial;margin:20px}
+.container{max-width:600px;margin:auto}
+#productList li{padding:8px;border:1px solid #ddd;margin-top:6px;display:flex;justify-content:space-between;align-items:center}
+.btns button{margin-left:6px}
+.editing input{width:70%}

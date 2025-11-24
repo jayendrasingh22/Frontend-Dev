@@ -1,0 +1,5 @@
+body[data-theme="light"]{background:#fff;color:#000}
+body[data-theme="dark"]{background:#222;color:#eee}
+body[data-theme="blue"]{background:#e6f0ff;color:#003366}
+.container{font-family:Arial;margin:20px}
+button{margin-right:8px}
