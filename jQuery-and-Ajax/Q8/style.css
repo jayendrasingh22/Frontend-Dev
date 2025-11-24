@@ -1,0 +1,12 @@
+
+/* style.css - simple layout */
+body{font-family: Arial, sans-serif; margin:20px; color:#222;}
+header h1{color:#2b6fbf;}
+.container{max-width:900px;margin:0 auto;}
+.grid{display:flex;flex-wrap:wrap;gap:12px;}
+.card{border:1px solid #ddd;padding:12px;border-radius:6px;flex:1 1 180px;min-width:160px;}
+.hidden{display:none;}
+button{cursor:pointer;}
+.highlight{background:#fff4c2;}
+.selected{border:2px solid #ff8;}
+.bad{color:red;}

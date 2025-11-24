@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Assignment 9 - Q5</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Assignment 9 - Q5</h1>
+    <p class="subtitle">Open console for debug messages. Page demonstrates jQuery interactions per task requirements.</p>
+  </header>
+
+  <main class="container">
+  <div class="card" id="team">
+    <h3>Managers</h3>
+    <ul>
+      <li class="manager">Alice
+        <ul>
+          <li class="employee dept-sales">Bob <span class="contact hidden">bob@ex.com</span></li>
+          <li class="employee dept-sales">Carol <span class="contact hidden">carol@ex.com</span></li>
+        </ul>
+      </li>
+      <li class="manager">Dave
+        <ul>
+          <li class="employee dept-tech">Eve <span class="contact hidden">eve@ex.com</span></li>
+          <li class="employee dept-tech">Frank <span class="contact hidden">frank@ex.com</span></li>
+        </ul>
+      </li>
+    </ul>
+    <div style="margin-top:8px;">
+      <button id="random-emp">Select Random Employee</button>
+      <button id="toggle-team">Collapse/Expand Teams</button>
+    </div>
+  </div>
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>
