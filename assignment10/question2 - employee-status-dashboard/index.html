@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Q2 - Employee Status Dashboard</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Employee Status Dashboard</h2>
+    <div id="error" class="error"></div>
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Toggle</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      const API = "http://localhost:3002/employees";
+
+      function fetchEmployees() {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", API);
+        xhr.onload = function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            const data = JSON.parse(xhr.responseText);
+            render(data);
+          } else {
+            document.getElementById("error").textContent =
+              "Failed to load employees";
+          }
+        };
+        xhr.onerror = function () {
+          document.getElementById("error").textContent = "Network error";
+        };
+        xhr.send();
+      }
+
+      function render(list) {
+        const tbody = document.querySelector("#tbl tbody");
+        tbody.innerHTML = "";
+        list.forEach((emp) => {
+          const tr = document.createElement("tr");
+          const statusText = emp.status;
+          tr.innerHTML =
+            "<td>" +
+            emp.name +
+            '</td><td class="status">' +
+            statusText +
+            "</td>" +
+            '<td><button data-id="' +
+            emp.id +
+            '" data-status="' +
+            emp.status +
+            '">' +
+            (emp.status === "active" ? "Set Inactive" : "Set Active") +
+            "</button></td>";
+          tbody.appendChild(tr);
+        });
+        // attach listeners
+        document.querySelectorAll("button[data-id]").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const id = this.dataset.id;
+            const current = this.dataset.status;
+            const newStatus = current === "active" ? "inactive" : "active";
+            // optimistic UI update
+            const row = this.parentElement.parentElement;
+            const statusCell = row.querySelector(".status");
+            const prevText = statusCell.textContent;
+            statusCell.textContent = newStatus;
+            this.textContent =
+              newStatus === "active" ? "Set Inactive" : "Set Active";
+            this.dataset.status = newStatus;
+            // send PATCH
+            const xhr = new XMLHttpRequest();
+            xhr.open("PATCH", API + "/" + id);
+            xhr.setRequestHeader(
+              "Content-Type",
+              "application/json;charset=UTF-8"
+            );
+            xhr.onload = () => {
+              if (!(xhr.status >= 200 && xhr.status < 300)) {
+                // revert
+                statusCell.textContent = prevText;
+                this.dataset.status = prevText;
+                this.textContent =
+                  prevText === "active" ? "Set Inactive" : "Set Active";
+                document.getElementById("error").textContent =
+                  "Failed to update status";
+              }
+            };
+            xhr.onerror = () => {
+              // revert
+              statusCell.textContent = prevText;
+              this.dataset.status = prevText;
+              this.textContent =
+                prevText === "active" ? "Set Inactive" : "Set Active";
+              document.getElementById("error").textContent =
+                "Network error while updating";
+            };
+            xhr.send(JSON.stringify({ status: newStatus }));
+          });
+        });
+      }
+
+      fetchEmployees();
+    </script>
+  </body>
+</html>

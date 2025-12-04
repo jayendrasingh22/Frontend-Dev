@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Fix login bug",
+      "priority": "High",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Write unit tests",
+      "priority": "Medium",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Design landing page",
+      "priority": "Low",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Optimize DB queries",
+      "priority": "High",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Update docs",
+      "priority": "Low",
+      "completed": true
+    }
+  ]
+}

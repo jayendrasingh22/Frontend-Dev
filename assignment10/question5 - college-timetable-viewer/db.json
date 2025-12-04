@@ -1,0 +1,39 @@
+{
+  "timetable": [
+    {
+      "id": 1,
+      "day": "Monday",
+      "subject": "Computer Org",
+      "faculty": "Dr. Rao",
+      "time": "09:00 - 10:00"
+    },
+    {
+      "id": 2,
+      "day": "Monday",
+      "subject": "Maths",
+      "faculty": "Prof. Roy",
+      "time": "10:15 - 11:15"
+    },
+    {
+      "id": 3,
+      "day": "Tuesday",
+      "subject": "Microprocessor",
+      "faculty": "Dr. Sen",
+      "time": "09:00 - 10:00"
+    },
+    {
+      "id": 4,
+      "day": "Wednesday",
+      "subject": "Networks",
+      "faculty": "Ms. Iyer",
+      "time": "11:30 - 12:30"
+    },
+    {
+      "id": 5,
+      "day": "Friday",
+      "subject": "OS",
+      "faculty": "Dr. Mehta",
+      "time": "14:00 - 15:00"
+    }
+  ]
+}

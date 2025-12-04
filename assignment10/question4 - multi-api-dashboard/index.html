@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Q4 - Multi-API Dashboard</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 20px;
+      }
+      .card {
+        display: inline-block;
+        padding: 12px;
+        margin: 8px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        width: 200px;
+        vertical-align: top;
+      }
+      .skeleton {
+        background: #eee;
+        height: 20px;
+        border-radius: 4px;
+        margin: 8px 0;
+      }
+      .warning {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Multi-API Dashboard</h2>
+    <div id="warning" class="warning"></div>
+    <div id="cards">
+      <div class="card" id="users">
+        <div class="skeleton" style="width: 60%"></div>
+      </div>
+      <div class="card" id="orders">
+        <div class="skeleton" style="width: 60%"></div>
+      </div>
+      <div class="card" id="products">
+        <div class="skeleton" style="width: 60%"></div>
+      </div>
+    </div>
+
+    <script>
+      const base = "http://localhost:3004";
+      const endpoints = [
+        { name: "users", url: base + "/users" },
+        { name: "orders", url: base + "/orders" },
+        { name: "products", url: base + "/products" },
+      ];
+
+      Promise.all(
+        endpoints.map(function (e) {
+          return fetch(e.url)
+            .then(function (r) {
+              if (!r.ok) throw new Error(e.name + " failed");
+              return r.json();
+            })
+            .then(function (data) {
+              return { name: e.name, data: data };
+            })
+            .catch(function (err) {
+              return { name: e.name, error: err };
+            });
+        })
+      )
+        .then(function (results) {
+          results.forEach(function (res) {
+            if (res.error) {
+              document.getElementById("warning").textContent =
+                "Some data could not be loaded.";
+            }
+            var el = document.getElementById(res.name);
+            if (res.data)
+              el.innerHTML =
+                "<h3>" +
+                res.name +
+                "</h3><div>Total: " +
+                res.data.length +
+                "</div>";
+            else
+              el.innerHTML =
+                "<h3>" +
+                res.name +
+                '</h3><div style="color:gray">Failed to load</div>';
+          });
+        })
+        .catch(function (err) {
+          document.getElementById("warning").textContent =
+            "Some data could not be loaded.";
+        });
+    </script>
+  </body>
+</html>
